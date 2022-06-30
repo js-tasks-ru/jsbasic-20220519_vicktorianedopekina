@@ -28,6 +28,7 @@ export default class CartIcon {
         this.elem.classList.remove('shake');
       }, { once: true });
 
+
     } else {
       this.elem.classList.remove('cart-icon_visible');
     }
@@ -72,5 +73,4 @@ export default class CartIcon {
         left: '',
       });
     }
-  }
-}
+

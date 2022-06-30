@@ -2,7 +2,6 @@ export default class Cart {
   cartItems = []; // [product: {...}, count: N]
   cartItem = {};
 
-
   constructor(cartIcon) {
     this.cartIcon = cartIcon;
   }
@@ -76,6 +75,7 @@ export default class Cart {
     let totalPrice = 0;
     this.cartItems.map(item => totalPrice += item.product.price * item.count);
     return totalPrice;
+  }
 
   onProductUpdate(cartItem) {
     // реализуем в следующей задаче

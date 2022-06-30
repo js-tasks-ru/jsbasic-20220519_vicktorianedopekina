@@ -8,7 +8,6 @@ export default class Cart {
   cartItem = {};
   modal
 
-
   constructor(cartIcon) {
     this.cartIcon = cartIcon;
 
@@ -84,6 +83,7 @@ export default class Cart {
     let totalPrice = 0;
     this.cartItems.map(item => totalPrice += item.product.price * item.count);
     return totalPrice;
+  }
 
   renderProduct(product, count) {
     return createElement(`
@@ -136,7 +136,6 @@ export default class Cart {
   }
 
   renderModal() {
-
     this.modal = new Modal();
     this.modal.setTitle("Your order");
     this.modal.setBody(createElement(`<div></div>`));

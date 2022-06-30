@@ -47,3 +47,4 @@ export default class ProductGrid {
     return this.#elem;
   }
 }
+

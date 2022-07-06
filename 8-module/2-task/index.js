@@ -19,7 +19,7 @@ export default class ProductGrid {
     let product = this.products;
 
     if (this.filters.vegeterianOnly) { product = product.filter((product) => product.vegeterian === true); }
-    if (this.filters.noNuts) { product = product.filter((product) => product.nuts == undefined); }
+    if (this.filters.noNuts) { product = product.filter((product) => product.nuts == undefined || product.nuts === false); }
     if (this.filters.maxSpiciness) { product = product.filter((product) => product.spiciness <= this.filters.maxSpiciness); }
     if (this.filters.category) { product = product.filter((product) => product.category === this.filters.category); }
 
